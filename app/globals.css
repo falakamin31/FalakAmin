@@ -1,0 +1,247 @@
+@import "tailwindcss";
+
+/* next-themes toggles the `dark` class on <html> */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ------------------------------------------------------------------ */
+/*  COLOR THEME — Forest + Gold                                        */
+/*  Change these CSS variables to re-theme the whole site at once.     */
+/* ------------------------------------------------------------------ */
+:root {
+  --background: #ffffff;
+  --surface: #f3f7f4;
+  --surface-2: #e7efe9;
+  --foreground: #0a1712;
+  --muted: #586b62;
+  --border: #dde7e0;
+  --accent: #047857;
+  --accent-2: #ca8a04;
+  --accent-contrast: #ffffff;
+}
+
+.dark {
+  --background: #0a1410;
+  --surface: #0f1d17;
+  --surface-2: #15241c;
+  --foreground: #e7f0ea;
+  --muted: #88a396;
+  --border: #1d2f26;
+  --accent: #fcd34d;
+  --accent-2: #34d399;
+  --accent-contrast: #0a1410;
+}
+
+/* ------------------------------------------------------------------ */
+/*  SELECTABLE PALETTES — toggled at runtime via [data-palette] on     */
+/*  <html> by the navbar palette switcher. Forest (above) is default.  */
+/* ------------------------------------------------------------------ */
+
+/* Sapphire Blue */
+[data-palette="sapphire"] {
+  --background: #ffffff; --surface: #f6f8fc; --surface-2: #eef2f9;
+  --foreground: #0c1424; --muted: #5a6679; --border: #e1e7f0;
+  --accent: #2563eb; --accent-2: #06b6d4; --accent-contrast: #ffffff;
+}
+.dark[data-palette="sapphire"] {
+  --background: #0a0f1c; --surface: #0f1626; --surface-2: #141d31;
+  --foreground: #e6ecf7; --muted: #8a97ad; --border: #1d273d;
+  --accent: #60a5fa; --accent-2: #22d3ee; --accent-contrast: #0a0f1c;
+}
+
+/* Slate + Indigo */
+[data-palette="indigo"] {
+  --background: #ffffff; --surface: #f8fafc; --surface-2: #f1f5f9;
+  --foreground: #0f172a; --muted: #64748b; --border: #e2e8f0;
+  --accent: #6366f1; --accent-2: #8b5cf6; --accent-contrast: #ffffff;
+}
+.dark[data-palette="indigo"] {
+  --background: #0b0f1a; --surface: #0f1626; --surface-2: #131a2a;
+  --foreground: #e2e8f0; --muted: #94a3b8; --border: #1e293b;
+  --accent: #818cf8; --accent-2: #a78bfa; --accent-contrast: #0b0f1a;
+}
+
+/* Emerald + Teal */
+[data-palette="emerald"] {
+  --background: #ffffff; --surface: #f4f7f6; --surface-2: #e9efed;
+  --foreground: #0c1512; --muted: #5b6b66; --border: #dde5e2;
+  --accent: #059669; --accent-2: #0d9488; --accent-contrast: #ffffff;
+}
+.dark[data-palette="emerald"] {
+  --background: #08110e; --surface: #0d1814; --surface-2: #11201a;
+  --foreground: #e6f0ec; --muted: #8aa39a; --border: #1b2b25;
+  --accent: #34d399; --accent-2: #2dd4bf; --accent-contrast: #08110e;
+}
+
+/* Amber + Gold */
+[data-palette="amber"] {
+  --background: #ffffff; --surface: #faf8f4; --surface-2: #f2ede4;
+  --foreground: #1c1611; --muted: #6b6155; --border: #e8e1d5;
+  --accent: #d97706; --accent-2: #f59e0b; --accent-contrast: #ffffff;
+}
+.dark[data-palette="amber"] {
+  --background: #14110c; --surface: #1c1810; --surface-2: #241f15;
+  --foreground: #f1ece2; --muted: #a3937e; --border: #2d2719;
+  --accent: #fbbf24; --accent-2: #f59e0b; --accent-contrast: #14110c;
+}
+
+/* Violet + Fuchsia */
+[data-palette="violet"] {
+  --background: #ffffff; --surface: #faf8fc; --surface-2: #f2edf9;
+  --foreground: #160c24; --muted: #665a79; --border: #e7e1f0;
+  --accent: #7c3aed; --accent-2: #d946ef; --accent-contrast: #ffffff;
+}
+.dark[data-palette="violet"] {
+  --background: #100a1c; --surface: #171026; --surface-2: #1e1631;
+  --foreground: #ece6f7; --muted: #9d8aad; --border: #2a1d3d;
+  --accent: #a78bfa; --accent-2: #e879f9; --accent-contrast: #100a1c;
+}
+
+/* Rose + Coral */
+[data-palette="rose"] {
+  --background: #ffffff; --surface: #fdf6f7; --surface-2: #f9ebed;
+  --foreground: #1c1114; --muted: #6b585c; --border: #ecdde0;
+  --accent: #e11d48; --accent-2: #f97316; --accent-contrast: #ffffff;
+}
+.dark[data-palette="rose"] {
+  --background: #160d0f; --surface: #1f1316; --surface-2: #27181c;
+  --foreground: #f5e9ec; --muted: #a38891; --border: #2f1d22;
+  --accent: #fb7185; --accent-2: #fdba74; --accent-contrast: #160d0f;
+}
+
+/* Cyber Cyan */
+[data-palette="cyber"] {
+  --background: #ffffff; --surface: #f3f9fb; --surface-2: #e6f1f5;
+  --foreground: #06121a; --muted: #52666f; --border: #d9e7ec;
+  --accent: #0891b2; --accent-2: #3b82f6; --accent-contrast: #ffffff;
+}
+.dark[data-palette="cyber"] {
+  --background: #060d12; --surface: #0a141b; --surface-2: #0f1d26;
+  --foreground: #e2eef4; --muted: #7e96a3; --border: #172731;
+  --accent: #22d3ee; --accent-2: #60a5fa; --accent-contrast: #060d12;
+}
+
+/* Sunset (Orange -> Pink) */
+[data-palette="sunset"] {
+  --background: #ffffff; --surface: #fdf7f4; --surface-2: #f9ece4;
+  --foreground: #1c130c; --muted: #6b5d52; --border: #ecdfd5;
+  --accent: #ea580c; --accent-2: #ec4899; --accent-contrast: #ffffff;
+}
+.dark[data-palette="sunset"] {
+  --background: #150c0c; --surface: #1e1310; --surface-2: #261915;
+  --foreground: #f5ebe3; --muted: #a3917e; --border: #2f1f19;
+  --accent: #fb923c; --accent-2: #f472b6; --accent-contrast: #150c0c;
+}
+
+/* Mono + Electric */
+[data-palette="mono"] {
+  --background: #ffffff; --surface: #f7f7f8; --surface-2: #efeff1;
+  --foreground: #0a0a0a; --muted: #6b6b70; --border: #e4e4e7;
+  --accent: #2563eb; --accent-2: #2563eb; --accent-contrast: #ffffff;
+}
+.dark[data-palette="mono"] {
+  --background: #0a0a0a; --surface: #141415; --surface-2: #1c1c1f;
+  --foreground: #ededee; --muted: #9a9aa0; --border: #27272a;
+  --accent: #3b82f6; --accent-2: #3b82f6; --accent-contrast: #0a0a0a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-accent-contrast: var(--accent-contrast);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, sans-serif;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Disable text selection site-wide (form fields re-enabled below) */
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+input,
+textarea {
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+/* Gradient text helper */
+.gradient-text {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Subtle animated hero glow / grid */
+.hero-grid {
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 40%, transparent 100%);
+}
+
+/* Infinite marquee (tech stack) */
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: marquee-left 40s linear infinite;
+}
+.marquee-track.reverse {
+  animation-name: marquee-right;
+  animation-duration: 40s;
+}
+.marquee-mask:hover .marquee-track {
+  animation-play-state: paused;
+}
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+/* Glow pulse for hero canvas fallback */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* Thin, professional scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--surface); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
