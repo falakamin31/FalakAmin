@@ -36,6 +36,18 @@
 /*  <html> by the navbar palette switcher. Forest (above) is default.  */
 /* ------------------------------------------------------------------ */
 
+/* Forest + Gold (mirrors :root / .dark so the explicit attribute works) */
+[data-palette="forest"] {
+  --background: #ffffff; --surface: #f3f7f4; --surface-2: #e7efe9;
+  --foreground: #0a1712; --muted: #586b62; --border: #dde7e0;
+  --accent: #047857; --accent-2: #ca8a04; --accent-contrast: #ffffff;
+}
+.dark[data-palette="forest"] {
+  --background: #0a1410; --surface: #0f1d17; --surface-2: #15241c;
+  --foreground: #e7f0ea; --muted: #88a396; --border: #1d2f26;
+  --accent: #fcd34d; --accent-2: #34d399; --accent-contrast: #0a1410;
+}
+
 /* Sapphire Blue */
 [data-palette="sapphire"] {
   --background: #ffffff; --surface: #f6f8fc; --surface-2: #eef2f9;

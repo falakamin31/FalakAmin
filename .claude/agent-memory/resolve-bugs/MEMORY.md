@@ -1,0 +1,1 @@
+- [SVG Image Optimization](project_svg-image-optimization.md) — next/image silently fails at runtime for SVGs unless dangerouslyAllowSVG + contentDispositionType are set in next.config.mjs

@@ -10,7 +10,7 @@ export default function Projects() {
       id="work"
       eyebrow="Selected Work"
       title="Projects I've shipped"
-      subtitle="A few projects that show how I turn ideas into working products. Live links and screenshots are placeholders for now."
+      subtitle="A few projects that show how I turn ideas into fast, polished, production-ready products."
     >
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((p, i) => (
@@ -48,6 +48,8 @@ export default function Projects() {
                 <div className="mt-5 flex items-center gap-4 border-t border-border pt-4 text-sm">
                   <a
                     href={p.live}
+                    target={p.live !== "#" ? "_blank" : undefined}
+                    rel={p.live !== "#" ? "noopener noreferrer" : undefined}
                     className="inline-flex items-center gap-1.5 font-medium transition-colors hover:text-accent"
                   >
                     Live <ArrowUpRight className="h-3.5 w-3.5" />
